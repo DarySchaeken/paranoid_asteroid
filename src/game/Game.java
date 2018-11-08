@@ -2,12 +2,12 @@ package game;
 
 import game.entities.Alien;
 import game.entities.Asteroid;
-import game.entities.Asteroid.Size;
 import game.entities.Bullet;
 import game.entities.Entity;
 import game.entities.Particle;
 import game.entities.Powerup;
 import game.entities.Ship;
+import game.entities.Size;
 import game.events.BulletFiredEvent;
 import game.events.BulletFiredListener;
 import game.events.HyperspaceListener;
@@ -791,10 +791,10 @@ public class Game implements BulletFiredListener, SaveHandler, HyperspaceListene
 		SoundEffect.ASTEROID_BREAK.play();
 		
 		// Try to break up the asteroid
-		Asteroid.Size aSize = asteroid.getSize();
+		Size aSize = asteroid.getSize();
 			
 		// Only if it's not already the smallest
-		if (aSize != Asteroid.Size.SMALL) {
+		if (aSize != Size.SMALL) {
 			newAsteroids.add(Asteroid.buildAsteroid(aSize.getSmaller(), new Point(asteroid.getCenter())));
 			newAsteroids.add(Asteroid.buildAsteroid(aSize.getSmaller(), new Point(asteroid.getCenter())));
 		}

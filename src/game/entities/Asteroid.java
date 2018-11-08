@@ -11,16 +11,6 @@ import java.awt.Polygon;
  * 
  */
 public abstract class Asteroid extends Entity {
-	public enum Size {
-		SMALL,
-		MEDIUM,
-		LARGE;
-		
-		public Size getSmaller() {
-			return (this == SMALL || this == MEDIUM) ? SMALL : MEDIUM;
-		}
-	}
-	
 	private static double LINEAR_SPEED_VARIANCE = 0.3;
 	private static double MIN_LINEAR_SPEED = 3e-8;
 	

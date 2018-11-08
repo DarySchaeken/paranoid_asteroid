@@ -9,7 +9,6 @@ import game.Point;
  *
  */
 public abstract class Entity {
-	public final static double FULL_CIRCLE_DEG = 360.0;
 	public final static double FULL_CIRCLE_RAD = 2 * Math.PI;
 	
 	private Point center;

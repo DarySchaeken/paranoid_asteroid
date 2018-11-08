@@ -96,9 +96,9 @@ public class GameController implements PauseHandler, SaveHandler {
 		
 		if (highScores.isHighScore(points)) {
 			String name = JOptionPane.showInputDialog(gamePanel, "Enter your name to save your high score!", "New High Score", JOptionPane.PLAIN_MESSAGE);
-			
-			if (name != null && !name.trim().equals("")) {
-				highScores.submit(points, name.trim());
+			name = name.trim();
+			if (name != null && !name.equals("") && name.length() > 20) {
+				highScores.submit(points, name);
 			}
 		} else {
 			JOptionPane.showMessageDialog(gamePanel, "Sorry, you didn't get a high score!", "Game Over", JOptionPane.PLAIN_MESSAGE);

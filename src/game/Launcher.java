@@ -34,10 +34,6 @@ public class Launcher implements Runnable {
 	 * Plays the background music in a new Thread
 	 */
 	private static void playBackgroundMusic() {
-		new Thread(new Runnable() {
-			public void run() {
-				new BackgroundPlayer().play();
-			}
-		}).start();
+		new Thread(new BackgroundPlayer()).start();
 	}
 }

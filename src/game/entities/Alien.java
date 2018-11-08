@@ -6,7 +6,6 @@ import java.util.List;
 
 
 import game.Point;
-import game.entities.Asteroid.Size;
 import game.events.BulletFiredEvent;
 import game.events.BulletFiredListener;
 import game.ui.GameCanvas;
